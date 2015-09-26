@@ -32,7 +32,7 @@ public class TouchGameUtil extends Activity{
 	 *
 	 * @return ベストタイム
 	 */
-	public int getBastTime(){
+	public long getBastTime(){
 		return pri.getInt("", 60);
 	}
 
@@ -45,6 +45,18 @@ public class TouchGameUtil extends Activity{
 		Editor edit = pri.edit();
 		edit.remove(key);
 		edit.putInt(key, score);
+		edit.commit();
+	}
+
+	/**
+	 * スコア保存
+	 * @param score 記録
+	 * @param key
+	 */
+	public void write(long score,String key){
+		Editor edit = pri.edit();
+		edit.remove(key);
+		edit.putLong(key, score);
 		edit.commit();
 	}
 }
