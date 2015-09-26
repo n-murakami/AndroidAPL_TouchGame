@@ -10,34 +10,35 @@ public class TouchGameUtil extends Activity{
 	private static SharedPreferences pri = null;
 
 	/**
-	 * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
-	 * @param context ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆ
+	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	 * @param context ƒRƒ“ƒeƒLƒXƒg
 	 */
 	public TouchGameUtil(Context context){
 		pri = context.getSharedPreferences("savedate",0);
 	}
 
 	/**
-	 * ãƒ™ã‚¹ãƒˆã‚¹ã‚³ã‚¢å–å¾—å‡¦ç†
+	 * ƒxƒXƒgƒXƒRƒAæ“¾ˆ—
 	 *
-	 * @return ãƒ™ã‚¹ãƒˆã‚¹ã‚³ã‚¢
+	 * @return ƒxƒXƒgƒXƒRƒA
 	 */
 	public int getBastScore(){
-		return pri.getInt("", 0);
+		return pri.getInt("", 60);
 	}
 
+
 	/**
-	 * ãƒ™ã‚¹ãƒˆã‚¿ã‚¤ãƒ å–å¾—å‡¦ç†
+	 * ƒxƒXƒgƒ^ƒCƒ€æ“¾ˆ—
 	 *
-	 * @return ãƒ™ã‚¹ãƒˆã‚¿ã‚¤ãƒ 
+	 * @return ƒxƒXƒgƒ^ƒCƒ€
 	 */
 	public int getBastTime(){
-		return pri.getInt("", 0);
+		return pri.getInt("", 60);
 	}
 
 	/**
-	 *
-	 * @param score è¨˜éŒ²
+	 * ƒXƒRƒA•Û‘¶
+	 * @param score ‹L˜^
 	 * @param key
 	 */
 	public void write(int score,String key){
